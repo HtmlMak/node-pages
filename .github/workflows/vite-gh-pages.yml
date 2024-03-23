@@ -40,7 +40,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          baseURL: $url
+          baseURL: ${{ steps.deployment.outputs.page_url }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
